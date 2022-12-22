@@ -1,9 +1,16 @@
 :root{
     --FunBluelight:rgba(23, 98, 167, 0.1);
     --MediumRedVioletlight:rgba(188, 58, 128, 0.1);
-    --white:rgba(255, 255, 255, 0.1);
+    --whitelight:rgba(255, 255, 255, 0.1);
+    --white:#ffffff;
     --Tuna:#2F2E38;
     --MediumRed:#BC3A80;
     --Shark:#202027;
     --Fun-Blue:#1762A7;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppin', sans-serif;
 }

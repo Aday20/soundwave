@@ -1,0 +1,214 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Tuna);
+    /* overflow-x: hidden; */
+}
+.nav-container{
+    width: 100%;
+    /* padding:0 5%; */
+}
+.nav-container nav {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 5% 0 7%;
+    padding: 1% 0;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li:nth-child(2){
+    margin-left: 70%;
+}
+nav ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-weight:normal ;
+}
+.logo{
+    width: 35%;
+}
+.logo img{
+    width: 100%;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width:719px) {
+    .nav-container  nav{
+        width: 85%;
+        margin-top: 3%;
+        margin-left:3% ;
+        margin-right:1% ;
+    }
+    .logo{
+        width: 100%;
+    }
+    .hamburger{
+        display: block;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        position: relative;
+        left: 2rem;
+        z-index: 500;
+        width: 2rem;
+        background-color: transparent;
+    }
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .hamburger:hover .menu, .hamburger:hover .menu::after, .hamburger:hover .menu::before{
+        background-color: var(--Fun-Blue);
+    }
+    .navigation{
+        display: block;
+        height: 10vh;
+        width: 40vw;
+        background-color: transparent;
+        position: fixed;
+        right: 0;
+        top: 4rem;
+        text-align: right;
+        transform: translateX(100px);
+        transition: transform 350ms ease-in-out;
+    }
+    .navigation.is-active{
+        transform: translateX(0);
+    }
+    .navigation li{
+        padding: 5px 10px;
+        background-image:linear-gradient(to right, purple , var(--Fun-Blue));
+        display: inline-block;
+        /* width: fit-content;
+        text-align: right; */
+        margin-bottom: 6px;
+
+    }
+    .menu{
+        display: inline-block;
+        width: 1.4rem;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        border-radius: 10px;
+        top: -5px;
+        left: 3px;
+        z-index: -1;
+    }
+    .menu::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: -5px;
+        left: -5px;
+        background-color: white;
+        border-radius: 10px;
+        z-index: -1;
+    }
+    .menu::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: -5px;
+        left: -5px;
+        border-radius: 10px;
+        z-index: -1;
+    }
+    .hamburger.is-active{
+        background-image:linear-gradient(to right, purple 30% , var(--Fun-Blue) 95%);
+        border-radius: 50%;
+        padding: 0 2%;
+        width: fit-content;
+        height: 1.6rem;
+        top: 10px;
+
+        
+    }
+    .hamburger.is-active .menu{
+        top: -3px;
+        left: 0;
+        width: .8rem;
+        height: 2.3px;
+        transform: rotate(55deg);
+        background-color:white ;
+        
+
+    }
+    .hamburger.is-active .menu::before{
+        transform: rotate(70deg);
+        left: -.4px;
+        top: .45px;
+        background-color:white ;
+        
+    }
+    .hamburger.is-active .menu::after{
+        opacity: 0;
+    }
+
+}
+@media (min-width:420px) {
+    .logo{
+        width: 65%;
+    }
+}
+@media (min-width:720px) {
+    nav ul li a{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .nav-container{
+        padding-right: 7%;
+    }
+    .nav-container  nav{
+            margin-top: 1.5%;
+    }
+    .logo{
+        width: 46%;
+    }
+}
+@media (min-width:820px) {
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+@media (min-width:920px) {
+    nav ul li a{
+        font-size: 18px;
+    }
+}
+@media (min-width:1020px) {
+    nav ul li a{
+        font-size: 19px;
+    }
+    .nav-container  nav{
+        margin-top: .5%;
+    }
+    .logo{
+        width: 36%;
+    }
+}
+@media (min-width:1200px) {
+    nav ul li a{
+        font-size: 20px;
+    }
+}
+@media (min-width:1300px) {
+    nav ul li a{
+        font-size: 22px;
+    }
+}
+@media (min-width:1400px) {
+    nav ul li a{
+        font-size: 24px;
+    }
+}
